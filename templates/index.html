@@ -21,31 +21,17 @@
     <title>YUME | AI Dreaming</title>
 </head>
 
-<body class="bg-dark">
-    <h1 class="text-center mt-2 text-light"> Welcome to YUME</h1>
-    <h4 class="text-center mt-2 text-light">The Dreaming AI</h4>
-    <hr> {% if model_loaded != True %}
-    <div class="card bg-danger w-50 m-auto">
-        <div class="card-header">
-            <h1 class="text-center text-light">
-                Important!!
-            </h1>
-            <h4 class="text-center">
-                Please Load the model first
-            </h4>
-        </div>
-        <div class="card-footer text-center">
-            <a href="/load-model" class="btn btn-warning">Load Model</a>
-        </div>
-    </div>
-    {% endif %}
+<body class="bg-warning">
+    <h1 class="text-center mt-2"> Welcome to YUME</h1>
+    <h4 class="text-center mt-2 text-dark">The Dreaming AI</h4>
+    <hr>
 
     <div class="row">
-        <div class="col-lg-3 col-sm-12 m-auto">
+        <div class="col-lg-5 col-sm-12 m-auto">
             <form action="generate" method="POST" class="m-5 text-center">
-                <input type="text" class="form-control" name="dream" placeholder="What you Dreamt of Today?">
-                <input type="number" class="form-control" name="length" value=50 min="10" max="500">
-                <input type="submit" value="Generate Story" class="btn btn-primary">
+                <textarea class="form-control" name="dream" placeholder="What you Dreamt of Today?" cols="50" rows="5"></textarea>
+                How many words do you want?<input type="number" class="" name="length" value=50 min="10" max="500">
+                <br><input type="submit" value="Generate Story" class="btn btn-primary mt-3">
             </form>
         </div>
     </div>

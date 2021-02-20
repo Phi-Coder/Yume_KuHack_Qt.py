@@ -25,9 +25,23 @@
     <h1 class="text-center mt-2"> Welcome to YUME</h1>
     <h4 class="text-center mt-2 text-dark">The Dreaming AI</h4>
     <hr>
-    <h1>
-        {{text}}
+    <h1 class="text-center text-primary">
+        Your Interpreted Dreams:
+        <hr>
     </h1>
+    <div class="row m-auto">
+        {% for dream in text %}
+        <div class="col-lg-4">
+            <div class="card text-center" style="border-radius: 17px; border: 2px solid black">
+                <div class="card-body">
+                    <div class="card-content m-auto text-capitalize">
+                        <h4>{{dream}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr> {% endfor %}
+    </div>
 </body>
 
 </html>
