@@ -2,7 +2,7 @@
 """
 Created on Fri Feb 19 23:33:22 2021
 
-@author: A15
+@author: YUvraj Dagur
 """
 from json import load
 
@@ -21,7 +21,8 @@ for dreamer in dreamers:
     
     for i in range(num_dreams):
         dreams.append(dream_content['dreams'][i]['content'])
-        
+ 
+# Convert List to String and create a text file
 def listToString(s):      
     # initialize an empty string 
     str1 = ""      
@@ -39,7 +40,7 @@ with open("dreams.txt", "w", encoding="utf-8") as f:
     f.write(dreams_string)
 
 import pandas as pd
-
+# Convert list to dataframe and save as csv file format
 dreams_dict = {'dreams': dreams}
 df = pd.DataFrame(dreams_dict)
 
